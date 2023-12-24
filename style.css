@@ -1,0 +1,42 @@
+/*Top panel*/
+.top {
+    display: flex;
+    margin: 0px 10px;
+    padding: 16px 16px;
+    background-color: #1a222e;
+    background-attachment: scroll;
+    background-clip:border-box;
+    background-size: auto;
+    box-sizing: border-box;
+}
+
+img {
+    width: 200px;
+    max-width: fit-content;
+    vertical-align: middle;
+    height: 100px;
+    object-fit: cover;
+    box-sizing: border-box;
+    text-align: right;
+}
+
+.logo {
+    white-space: nowrap;
+    color:rgba(236, 235, 229, 0.75);
+    box-sizing: border-box;
+    margin-top: 40px;
+    
+}
+
+.q, .c, .e, .dot {
+    display: inline-block;
+    margin-right: 10px;
+    margin-left: 10px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 28px;
+}
+
+.c, .e {
+    list-style-image: initial; 
+}
+
