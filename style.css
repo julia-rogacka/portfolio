@@ -1,10 +1,14 @@
 * {
     font-family: 'Poppins', sans-serif;
 }
+
+menu{
+    background-color: white;
+}
+
 /*Top panel*/
 .top {
     display: flex;
-    margin: 0px 10px;
     padding: 16px 16px;
     background-color: #1a222e;
     background-attachment: scroll;
@@ -48,9 +52,21 @@ img {
     margin: 0;
     padding: 0;
     display: flex;
-    justify-content: space-between;
-    align-items: center;
+    flex-direction: column;
     background-color: #021528;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+    list-style-position: outside;
+    padding-bottom: 30px;
+    padding-inline-start: 30px;
+    padding-left: 0px;
+    padding-right: 30px;
+    padding-top: 30px;
+    text-align: start;
+    text-size-adjust: 100%;
+    transition-property: all;
+    width: 250px;
 }
 
 .side li {
@@ -58,10 +74,28 @@ img {
 }
 
 .side li a {
+    display: block;
+    background-attachment: scroll;
+    background-clip: border-box;
     text-decoration: none;
+    background-size: auto;
     padding: 1rem;
     display: flex;
     flex-direction: column;
+    text-align: start;
+    border: 0.8px;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    border-top-right-radius: 5px;
+    border-top-left-radius: 5px;
+    border-color: rgba(255, 255, 255, 0.1);
+    border-style: solid;
+    font-size: 16px;
+    font-weight: 500;
+    letter-spacing: 1px;
+    line-height: 12px;
+    margin-top: 30px;
+    position: relative;
 }
 
 a:link, a:visited {
@@ -70,4 +104,10 @@ a:link, a:visited {
 
 a:hover, a:active {
     color:#4EDF86;
+}
+
+/*Main panel*/
+main{
+    padding-left: 350px;
+
 }
