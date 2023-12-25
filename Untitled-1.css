@@ -19,16 +19,12 @@ body{
 menu{
     width: 100vw;
     min-height: 100vh;
-    padding-left: 0px;
 }
 
 /*Top panel*/
 .top {
     display: flex;
-    padding-top: 0px;
-    padding-bottom: 16px;
-    padding-right: 16px;
-    padding-left: 0px;
+    padding: 16px 16px;
     background-color: #1a222e;
     background-attachment: scroll;
     background-clip:border-box;
@@ -67,21 +63,11 @@ img {
 
 /*Side panel*/
 .side {
-    box-sizing: border-box;
     float: left;
     width: 250px;
     background-color:#021528;
     color: #ECEBE5;
     padding: 20px;
-    padding-left: 0px;
-    background-color: #021528;
-    font-size: 16px;
-    font-weight: 400;
-    line-height: 24px;
-    list-style-position: outside;
-    border-right-color: #1a222e;
-    border-right-style: solid;
-    border-right-width: 2px;
 }
 
 .side li {
@@ -122,12 +108,9 @@ a:hover, a:active {
 }
 
 /*Main panel*/
-main{
-    margin-left: 50px;
-    margin-top: 120px;
+main {
+    margin-left: 350px;
     padding: 20px;
     color: #ECEBE5;
-    font-size: 16px;
-    font-weight: 400;
-    padding-top: 50px;
 }
+
