@@ -9,6 +9,8 @@ body{
     display: grid;
     grid-template-columns: 250px 1fr; /* Sidebar takes 250px, the rest is for content */
     grid-template-rows: 100vh; 
+    overflow-y: scroll;
+    overflow-x: hidden;
 }
 
 .container {
@@ -26,7 +28,7 @@ menu{
 .top {
     display: flex;
     padding-top: 0px;
-    padding-bottom: 16px;
+    padding-bottom: 14px;
     padding-right: 16px;
     padding-left: 0px;
     background-color: #1a222e;
@@ -45,7 +47,7 @@ img {
     width: 200px;
     max-width: fit-content;
     vertical-align: middle;
-    height: 100px;
+    height: 75px;
     object-fit: cover;
     box-sizing: border-box;
     text-align: right;
@@ -55,7 +57,7 @@ img {
     white-space: nowrap;
     color:rgba(236, 235, 229, 0.75);
     box-sizing: border-box;
-    margin-top: 40px;
+    margin-top: 20px;
     
 }
 
@@ -77,7 +79,7 @@ img {
     width: 250px;
     background-color:#021528;
     color: #ECEBE5;
-    margin-top: 100px;
+    margin-top: 70px;
     padding: 20px;
     padding-left: 0px;
     background-color: #021528;
@@ -135,17 +137,23 @@ a:hover, a:active {
 
 /*Main panel*/
 main{
-    margin-left: 50px;
-    margin-top: 120px;
-    padding: 20px;
+    margin-top: 100px;
+    padding: 0px;
     color: #ECEBE5;
     font-size: 16px;
     font-weight: 400;
-    padding-top: 50px;
 }
 
 /*Home section*/
 .home{
+    text-align: center;
+    background-image: url(home_background-img-70.png);
+    background-position: center;
+    background-size: cover;
+    height: 100vh;
+    width: 100%;
+    height: 540px;
+    padding-top: 100px;
     text-align: center;
 }
 
@@ -153,11 +161,81 @@ h1{
     box-sizing: border-box;
     display: block;
     color: #ECEBE5;
-    font-size: 28px;
+    font-size: 48px;
     font-weight: bold;
     line-height: 50.4px;
     margin-bottom: 8px;
     margin-block-end: 8px;
     margin-block-start: 0px;
     text-size-adjust: 100%;
+}
+
+.typewriter {
+    font-size: 50px;
+}
+
+.location {
+    box-sizing: border-box;
+    display: block;
+    color: #ECEBE5;
+    font-size: 28px;
+    font-weight: 200;
+    line-height: 50.4px;
+    margin-bottom: 8px;
+    margin-block-end: 8px;
+    margin-block-start: 0px;
+    text-size-adjust: 100%;
+}
+
+.intro {
+    margin-top: 80px;
+}
+.hire {
+    background-color: transparent;
+    border-bottom-color:#21CC7F;
+    border-bottom-left-radius: 800px;
+    border-bottom-right-radius: 800px;
+    border-bottom-style: solid;
+    border-bottom-width: 1.6px;
+    border-left-color:#21CC7F;
+    border-left-style: solid;
+    border-left-width: 1.6px;
+    border-right-color: #21CC7F;
+    border-right-style: solid;
+    border-right-width: 1.6px;
+    border-top-color: #21CC7F;
+    border-top-left-radius: 800px;
+    border-top-right-radius: 800px;
+    border-top-style: solid;
+    border-top-width: 1.6px;
+    box-shadow: none;
+    box-sizing: border-box;
+    color:#21CC7F;
+    display: inline-block;
+    font-size: 16px;
+    line-height: 24px;
+    padding-left: 32px;
+    padding-right: 32px;
+    padding-top: 12.96px;
+    padding-bottom: 12.96px;
+    margin-top: 8px;
+    text-align: center;
+    text-decoration-color: #21CC7F;
+    text-decoration-line: none;
+    text-decoration-style: solid;
+    text-decoration-thickness: auto;
+    text-size-adjust: 100%; 
+    vertical-align: middle;
+}
+
+.hire a {
+    color:#21CC7F;
+    text-decoration: none;
+    text-align: center;
+}
+
+.hire a:link, .hire a:visited, .hire a:hover, .hire a:active {
+    color: #21CC7F;
+    font-size: 18px;
+    font-weight: 200;
 }
