@@ -7,7 +7,7 @@ body{
     padding: 0;
     background-color: #021528;
     display: grid;
-    grid-template-columns: 250px 1fr; /* Sidebar takes 250px, the rest is for content */
+    grid-template-columns: 260px 1fr; /* Sidebar takes 250px, the rest is for content */
     grid-template-rows: 100vh; 
     overflow-y: scroll;
     overflow-x: hidden;
@@ -27,10 +27,10 @@ menu{
 /*Top panel*/
 .top {
     display: flex;
-    padding-top: 0px;
-    padding-bottom: 14px;
+    padding-top: 10px;
+    padding-bottom: 10px;
     padding-right: 16px;
-    padding-left: 0px;
+    padding-left: 16px;
     background-color: #1a222e;
     background-attachment: scroll;
     background-clip:border-box;
@@ -108,7 +108,7 @@ img {
     background-clip: border-box;
     text-decoration: none;
     background-size: auto;
-    padding: 1rem;
+    padding: 16px;
     display: flex;
     flex-direction: column;
     text-align: start;
@@ -124,6 +124,7 @@ img {
     letter-spacing: 1px;
     line-height: 12px;
     margin-top: 30px;
+    margin-left: 15px;
     position: relative;
 }
 
@@ -190,6 +191,7 @@ h1{
 .intro {
     margin-top: 80px;
 }
+
 .hire {
     background-color: transparent;
     border-bottom-color:#21CC7F;
@@ -232,10 +234,19 @@ h1{
     color:#21CC7F;
     text-decoration: none;
     text-align: center;
+    font-size: 18px;
+    font-weight: 400;
 }
 
 .hire a:link, .hire a:visited, .hire a:hover, .hire a:active {
     color: #21CC7F;
-    font-size: 18px;
-    font-weight: 200;
+}
+
+.hire:hover { 
+    background-color: #21CC7F;
+    cursor: pointer;
+}
+
+.hire:hover a {
+    color: #ECEBE5;
 }
