@@ -1,3 +1,14 @@
+:root {
+    --dark-background-color: #212529;
+    --light-background-color: #343A40;
+    --menu-color: #111418;
+    --top-color: #02030C;
+    --back-text-color: #ffffff80;
+    --main-text-color: #ECEBE5;
+    --light-green: #4edf86;
+    --dark-green: #21cc7f;
+}
+
 * {
     font-family: 'Poppins', sans-serif;
 }
@@ -5,7 +16,7 @@
 body{
     margin: 0;
     padding: 0;
-    background-color: #021528;
+    background-color: var(--menu-color);
     display: grid;
     grid-template-columns: 260px 1fr; /* Sidebar takes 250px, the rest is for content */
     grid-template-rows: 100vh; 
@@ -31,7 +42,7 @@ menu{
     padding-bottom: 10px;
     padding-right: 16px;
     padding-left: 16px;
-    background-color: #1a222e;
+    background-color: var(--top-color);
     background-attachment: scroll;
     background-clip:border-box;
     background-size: auto;
@@ -77,17 +88,16 @@ img {
     box-sizing: border-box;
     float: left;
     width: 250px;
-    background-color:#021528;
-    color: #ECEBE5;
+    background-color:var(--menu-color);
+    color: var(--main-text-color);
     margin-top: 70px;
     padding: 20px;
     padding-left: 0px;
-    background-color: #021528;
     font-size: 16px;
     font-weight: 400;
     line-height: 24px;
     list-style-position: outside;
-    border-right-color: #1a222e;
+    border-right-color: var(--light-background-color);
     border-right-style: solid;
     border-right-width: 2px;
     overflow-x: hidden;
@@ -117,7 +127,7 @@ img {
     border-bottom-right-radius: 5px;
     border-top-right-radius: 5px;
     border-top-left-radius: 5px;
-    border-color: rgba(255, 255, 255, 0.1);
+    border-color: var(--light-background-color);
     border-style: solid;
     font-size: 16px;
     font-weight: 500;
@@ -140,7 +150,7 @@ a:hover, a:active {
 main{
     margin-top: 100px;
     padding: 0px;
-    color: #ECEBE5;
+    color: var(--main-text-color);
     font-size: 16px;
     font-weight: 400;
 }
@@ -156,12 +166,13 @@ main{
     height: 540px;
     padding-top: 100px;
     text-align: center;
+    padding-left: 0px;
 }
 
 h1{
     box-sizing: border-box;
     display: block;
-    color: #ECEBE5;
+    color: var(--main-text-color);
     font-size: 48px;
     font-weight: bold;
     line-height: 50.4px;
@@ -178,7 +189,7 @@ h1{
 .location {
     box-sizing: border-box;
     display: block;
-    color: #ECEBE5;
+    color: var(--main-text-color);
     font-size: 28px;
     font-weight: 200;
     line-height: 50.4px;
@@ -192,27 +203,28 @@ h1{
     margin-top: 80px;
 }
 
+/*button*/
 .hire {
     background-color: transparent;
-    border-bottom-color:#21CC7F;
+    border-bottom-color: var(--dark-green);
     border-bottom-left-radius: 800px;
     border-bottom-right-radius: 800px;
     border-bottom-style: solid;
     border-bottom-width: 1.6px;
-    border-left-color:#21CC7F;
+    border-left-color: var(--dark-green);
     border-left-style: solid;
     border-left-width: 1.6px;
-    border-right-color: #21CC7F;
+    border-right-color: var(--dark-green);
     border-right-style: solid;
     border-right-width: 1.6px;
-    border-top-color: #21CC7F;
+    border-top-color: var(--dark-green);
     border-top-left-radius: 800px;
     border-top-right-radius: 800px;
     border-top-style: solid;
     border-top-width: 1.6px;
     box-shadow: none;
     box-sizing: border-box;
-    color:#21CC7F;
+    color: var(--dark-green);
     display: inline-block;
     font-size: 16px;
     line-height: 24px;
@@ -222,7 +234,7 @@ h1{
     padding-bottom: 12.96px;
     margin-top: 8px;
     text-align: center;
-    text-decoration-color: #21CC7F;
+    text-decoration-color: var(--dark-green);
     text-decoration-line: none;
     text-decoration-style: solid;
     text-decoration-thickness: auto;
@@ -231,7 +243,7 @@ h1{
 }
 
 .hire a {
-    color:#21CC7F;
+    color: var(--dark-green);
     text-decoration: none;
     text-align: center;
     font-size: 18px;
@@ -239,14 +251,122 @@ h1{
 }
 
 .hire a:link, .hire a:visited, .hire a:hover, .hire a:active {
-    color: #21CC7F;
+    color: var(--dark-green);
 }
 
 .hire:hover { 
-    background-color: #21CC7F;
+    background-color: var(--dark-green);
     cursor: pointer;
 }
 
 .hire:hover a {
-    color: #ECEBE5;
+    color: var(--main-text-color);
+}
+
+/*About me section"*/
+
+.about{
+    height: 540px;
+    width: 100%;
+}
+
+h2 {
+    align-self: center;
+    box-sizing: border-box;
+    position: absolute;
+    box-sizing: border-box;
+    color: var(--main-text-color);
+    display: block;
+    font-size: 48px;
+    font-weight: bold;
+    line-height: 50px;
+    text-size-adjust: 100%;
+    text-align: center;
+}
+
+.introduction {
+    position: relative;
+    box-sizing: border-box;
+    color: var(--back-text-color);
+    font-size: 100px;
+    font-weight: 800;
+    line-height: 98px;
+    opacity: 0.1;
+    text-align: center;
+    text-size-adjust: 100%;
+    text-transform: uppercase;
+    width: fit-content;
+    text-align: center;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+/*Years grid*/
+
+.quantity {
+    box-sizing: border-box;
+    color: var(--back-text-color);
+    display: block;
+    font-size: 24px;
+    font-weight: 400;
+    line-height: 24px;
+    margin-top: 48px;
+    text-align: start;
+    text-size-adjust: 100%;
+}
+
+.grid {
+    box-sizing: border-box;
+    color: var(--back-text-color);
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: -12px;
+    margin-right: -12px;
+}
+
+.col-1 {
+    box-sizing: border-box;
+    display: block;
+    flex-basis: auto;
+    max-width: 100%;
+    padding: 20px 12px;
+    position: relative;
+
+}
+
+.quantity::before {
+    border-left-color: var(--light-background-color);
+    border-left-style: dotted;
+    border-left-width: 0.8px;
+    box-sizing: border-box;
+    color: var(--light-background-color);
+    content: "";
+    height: 124.025px;
+    left: -1px;
+    line-height: 24px;
+    position: absolute;
+    text-align: start;
+    text-size-adjust: 100%;
+    top: 0px;
+    width: 0.8px;
+}
+
+.col-2 {
+    box-sizing: border-box;
+    display: block;
+    flex-basis: auto;
+    max-width: 100%;
+    padding: 20px 12px;
+    position: relative;
+    
+}
+
+.col-3 {
+    box-sizing: border-box;
+    display: block;
+    flex-basis: auto;
+    max-width: 100%;
+    padding: 20px 12px;
+    position: relative;
+    
 }
