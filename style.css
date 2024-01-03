@@ -277,9 +277,8 @@ h1{
 }
 
 
-/*About me section"*/
+/*Headlines of all of the sections*/
 .header {
-    background-color: var(--dark-background-color);
     box-sizing: border-box;
     color: var(--light-background-color);
     display: flex;
@@ -295,7 +294,7 @@ h1{
     text-size-adjust: 100%;
 }
 
-h2 {
+.head {
     box-sizing: border-box;
     color: var(--main-text-color);
     display: block;
@@ -316,7 +315,7 @@ h2 {
     width: 696px;
 }
 
-.introduction {
+.undertext {
     box-sizing: border-box;
     color: var(--back-text-color);
     display: block;
@@ -393,3 +392,5 @@ h2 {
     font-weight: 600;
     color: var(--light-green);
 }
+
+/*Resume section*/
