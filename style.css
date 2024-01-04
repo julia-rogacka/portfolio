@@ -13,6 +13,11 @@
     font-family: 'Poppins', sans-serif;
 }
 
+.divider {
+    height: 20px;
+    width: max-content;
+}
+
 body{
     margin: 0;
     padding: 0;
@@ -93,9 +98,6 @@ img {
     font-weight: 400;
     line-height: 24px;
     list-style-position: outside;
-    border-right-color: var(--light-background-color);
-    border-right-style: solid;
-    border-right-width: 2px;
     overflow-x: hidden;
     position: fixed; 
     top: 0;
@@ -268,14 +270,13 @@ h1{
 }
 
 /*sections with light bacground*/
-.resume, .projects, .recommendations {
+ .resume, .projects, .recommendations {
     height: 640px;
     width: 100%;
     background-color: var(--light-background-color);
     text-align: center;
     padding: 58px 0px;
 }
-
 
 /*Headlines of all of the sections*/
 .header {
@@ -298,7 +299,7 @@ h1{
     box-sizing: border-box;
     color: var(--main-text-color);
     display: block;
-    font-size: 36px;
+    font-size: 48px;
     font-weight: 600;
     height: 56.4px;
     line-height: 54px;
@@ -312,7 +313,6 @@ h1{
     position: absolute;
     text-align: center;
     text-size-adjust: 100%;
-    width: 696px;
 }
 
 .undertext {
@@ -333,7 +333,22 @@ h1{
     text-align: center;
     text-size-adjust: 100%;
     text-transform: uppercase;
-    width: 696px;
+    letter-spacing: 7px;
+}
+
+/*About me section*/
+h2 {
+    box-sizing: border-box;
+    color: var(--main-text-color);
+    display: block;
+    text-align: center;
+    font-size: 32px;
+    font-weight: 800;
+    line-height: 24px;
+    margin-bottom: 8px;
+    margin-block-end: 8px;
+    margin-block-start: 0px;
+    text-size-adjust: 100%;
 }
 
 .text {
@@ -341,7 +356,7 @@ h1{
     color: var(--main-text-color);
     display: block;
     text-align: center;
-    font-size: 24px;
+    font-size: 22px;
     font-weight: 500;
     line-height: 24px;
     margin-bottom: 8px;
@@ -394,3 +409,36 @@ h1{
 }
 
 /*Resume section*/
+.column {
+    display: flex;
+    justify-content: center;
+    width: 1100px;
+    margin: 0 auto;
+    height: 450px;
+  }
+  
+  .education, .experience {
+    flex: 1;
+    margin-right: 20px; 
+    overflow-y: auto;
+  }
+
+.box {
+    background-color: var(--dark-background-color);
+    box-sizing: border-box;
+    border-top-right-radius: 6px;
+    border-top-left-radius: 6px;
+    border-bottom-left-radius: 6px;
+    border-bottom-right-radius: 6px;
+    color: var(--main-text-color);
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    float: left;
+    width: 100%;
+    max-width: 500px;
+    font-size: 16px;
+    font-weight: 200;
+    padding: 15px;
+    margin: 0 auto;
+}
