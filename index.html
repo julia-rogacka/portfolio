@@ -3,6 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <title>PR QCE</title>
     <link href="style.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap" rel="stylesheet">
@@ -21,14 +25,14 @@
         <div class="container">
             <nav>
                 <ul class="side">
-                    <li><a href="#">HOME</a></li>
-                    <li><a href="#">ABOUT ME</a></li>
-                    <li><a href="#">RESUME</a></li>
-                    <li><a href="#">SKILLS</a></li>
-                    <li><a href="#">PROJECTS</a></li>
-                    <li><a href="#">SERVICES</a></li>
-                    <li><a href="#">RECOMMENDATIONS</a></li>
-                    <li><a href="#">CONTACT</a></li>
+                    <li><a href="#">home</a></li>
+                    <li><a href="#">about me</a></li>
+                    <li><a href="#">resume</a></li>
+                    <li><a href="#">skills</a></li>
+                    <li><a href="#">projects</a></li>
+                    <li><a href="#">services</a></li>
+                    <li><a href="#">recommendations</a></li>
+                    <li><a href="#">contact</a></li>
                 </ul>
             </nav>
         </div>
@@ -38,7 +42,7 @@
         <div class="home">
             <div class="intro">
                 <h1>Welcome</h1>
-                <p class="typewriter">I'm freelancer</p>
+                <p id="app">I'm freelancer</p>
                 <p class="location">Based in Szczecin, Poland.</p>
                 <button class="hire"><a href="#">Hire me</a></button>
             </div>
@@ -208,23 +212,26 @@
                 <p class="head">Skills</p>
                 <p class="undertext">Competence</p>
             </div>
-
-            <div class="hard-skills">
-                <p>Quality control and management</p>
-                <p>Practice knowledge of quality European Standards and Directives</p>
-                <p>Auditing of quality systems (ISO 9001, EN ISO 3834)</p>
-                <p>Expert in welding engineering (IWE)</p>
-                <p>Quality assurance software: Aconex, Omega 365, Teamcenter</p>
+            <div class="container-skills">
+                <div class="hard-skills">
+                    <h5>Hard skills</h5>
+                    <p>Quality control and management</p>
+                    <p>Practice knowledge of quality European Standards and Directives</p>
+                    <p>Auditing of quality systems (ISO 9001, EN ISO 3834)</p>
+                    <p>Expert in welding engineering (IWE)</p>
+                    <p>Quality assurance software: Aconex, Omega 365, Teamcenter</p>
                 </div>
 
-            <div class="soft-skills">
-                <p>Task oriented</p>
-                <p>Problem solving</p>
-                <p>Teamwork</p>
-                <p>Project management skills</p>
-                <p>Persistence</p>
-                <p>Strong team leader</p>
-                <p>Strategic approach to work</p>
+                <div class="soft-skills">
+                    <h6>Soft skills</h6>
+                    <p>Task oriented</p>
+                    <p>Problem solving</p>
+                    <p>Teamwork</p>
+                    <p>Project management skills</p>
+                    <p>Persistence</p>
+                    <p>Strong team leader</p>
+                    <p>Strategic approach to work</p>
+                </div>
             </div>
         </div>
 
@@ -260,6 +267,39 @@
                 <p class="head">Recommendations</p>
                 <p class="undertext">Testimonial</p>
             </div>
+
+            <div class="swiper">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <p class="firm">B&W Vølund</p>
+                        <div class="divider-recommendations"></div>
+                        <p class="word">"[...]based on his work, I am very pleased to recommend his as an excellent Inspector/Expeditor, which we have been very satisfied to work with. [...] Pawel Rogacki handles his responsibility well. He always takes an active role in assigned tasks. [...] In my opinion, Pawel Rogacki is a hardworking self-starter, who invariably understands exactly what a project is all about.</p>
+                    </div>
+                    <div class="swiper-slide">
+                        <p class="firm">Triple S-F</p>
+                        <div class="divider-recommendations"></div>
+                        <p class="word">"I have no hestistancy in writing a letter of recommendation for Pawel Rogacki.[...]He was handling his responsibilieties very well."</p>
+                    </div>
+                    <div class="swiper-slide">
+                        <p class="firm">NDT Reports</p>
+                        <div class="divider-recommendations"></div>
+                        <p class="word">"I would like to say that it was pleasant to work with Pawel Rogacki. He difinitely is reliable and intelligent person with good sense of humor. If his performance in our company is a good indication of how he would perform in yours. He would be an extremally positive asset to your program."</p>
+                    </div>
+                    <div class="swiper-slide">
+                        <p class="firm">A-L STAAL</p>
+                        <div class="divider-recommendations"></div>
+                        <p class="word">"Pawel Rogacki consistently produces high quality work in timely fashion."</p>
+                    </div>
+                    <div class="swiper-slide">
+                        <p class="firm">BLADT</p>
+                        <div class="divider-recommendations"></div>
+                        <p class="word">"He was handling his responsibility very well. He has a broad range of skills and his greatest talinet lies in creative solving problems, ability working under the stress and flexibility. He grasps new concepts quickly and adopt to new situations without any problems."</p>
+                    </div>
+                </div>
+                <div class="swiper-pagination"></div>
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-button-next"></div>
+            </div>    
         </div>
 
         <div class="divider"></div>
@@ -275,6 +315,6 @@
 
     <footer>
     </footer>
-    
+   
 </body>
 </html>
