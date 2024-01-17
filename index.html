@@ -3,10 +3,6 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link
-  rel="stylesheet"
-  href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
-<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <title>PR QCE</title>
     <link href="style.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap" rel="stylesheet">
@@ -24,33 +20,37 @@
 
         <div class="container">
             <nav>
-                <ul class="side">
-                    <li><a href="#">home</a></li>
-                    <li><a href="#">about me</a></li>
-                    <li><a href="#">resume</a></li>
-                    <li><a href="#">skills</a></li>
-                    <li><a href="#">projects</a></li>
-                    <li><a href="#">services</a></li>
-                    <li><a href="#">recommendations</a></li>
-                    <li><a href="#">contact</a></li>
-                </ul>
+                <div id="mySidebar" class="sidebar">
+                    <button class="openbtn" onclick="toggleSidebar()">☰</button>
+                    <a class="active" href="#home">home</a>
+                    <a href="#about">about me</a>
+                    <a href="#resume">resume</a>
+                    <a href="#skills">skills</a>
+                    <a href="#projects">projects</a>
+                    <a href="#services">services</a>
+                    <a href="#recommendations">recommendations</a>
+                    <a href="#contact">contact</a>
+                </div>
+                <div id="main">
+                    <button class="openbtn" onclick="openNav()">&#9776; Open Sidebar</button>
+                </div>
             </nav>
         </div>
     </menu>
 
     <main>
-        <div class="home">
+        <div id="home">
             <div class="intro">
                 <h1>Welcome</h1>
                 <p id="app">I'm freelancer</p>
                 <p class="location">Based in Szczecin, Poland.</p>
-                <button class="hire"><a href="#">Hire me</a></button>
+                <a href="#contact" class="hire">Hire me</a>
             </div>
         </div>
 
         <div class="divider"></div>
     
-        <div class="about"> 
+        <div id="about"> 
             <div class="header">
                 <p class="head">About me</p>
                 <p class="undertext">Introduction</p>
@@ -85,7 +85,7 @@
 
         <div class="divider"></div>
     
-        <div class="resume">
+        <div id="resume">
             <div class="header">
                 <p class="head">Resume</p>
                 <p class="undertext">Summary</p>
@@ -207,7 +207,7 @@
 
         <div class="divider"></div>
     
-        <div class="skills">
+        <div id="skills">
             <div class="header">
                 <p class="head">Skills</p>
                 <p class="undertext">Competence</p>
@@ -237,7 +237,7 @@
 
         <div class="divider"></div>
     
-        <div class="projects">
+        <div id="projects">
             <div class="header">
                 <p class="head">Projects</p>
                 <p class="undertext">Portfolio</p>
@@ -246,29 +246,38 @@
 
         <div class="divider"></div>
     
-        <div class="services">
+        <div id="services">
             <div class="header">
                 <p class="head">Services</p>
                 <p class="undertext">Capabilities</p>
             </div>
 
-            <p>Services i can offer:</p>
-            <ul>
-                <li>QA/QC Management</li>
-                <li>Quality control and inspections</li>
-                <li>Expediting</li>
-            </ul>
+            <p>What I can offer:</p>
+                <p>QA/QC Management</p>
+                <p>Quality control and inspections</p>
+                <p>Expediting</p>
+                <p>Manage supplier qualifications to ensure that assigned suppliers are capable of producing material, and/or components that will consistently meet Client specification and requirements</p>
+                <p>Conduct surveillance audits and inspections to assure that suppliers have effective process control, rigorous product acceptance standards, and robust quality systems</p>
+                <p>Management of supplier non-conformance</p>
+                <p>Provide technical guidance to suppliers to assure product/process compliance with engineering drawings, Standards and Client specifications</p>
+                <p>Work closely with commercial, engineering and manufacturing teams to eliminate any barriers that may affect the quality and delivery of sourced components</p>
+                <p>Sets, develops and leads quality strategy, objectives and target in alignment with objectives</p>
+                <p>Assure Quality of processes fulfils requirements</p>
+                <p>Take ownership of identifying and closing potential gaps to retain excellent results in all relevant Quality, Environmental and Safety Standards</p>
+                <p>Identify and suggest improvements to our project methods, processes, and standards as well as process and project quality control on continuous basis.</p>
+                <p>Define, suggest, and maintain structures and processes across the operations to meet Quality, Safety and environmental standards</p>
+                <p>Control progress of ongoing works what gives the Client the real view of all aspects of his project and make possible to take appropriate steps</p>
         </div>
 
         <div class="divider"></div>
 
-        <div class="recommendations">
+        <div id="recommendations">
             <div class="header">
                 <p class="head">Recommendations</p>
                 <p class="undertext">Testimonial</p>
             </div>
 
-            <div class="swiper">
+            <div class="swiper mySwiper">
                 <div class="swiper-wrapper">
                     <div class="swiper-slide">
                         <p class="firm">B&W Vølund</p>
@@ -299,12 +308,13 @@
                 <div class="swiper-pagination"></div>
                 <div class="swiper-button-prev"></div>
                 <div class="swiper-button-next"></div>
-            </div>    
+                <div class="swiper-scrollbar"></div>
+            </div>   
         </div>
 
         <div class="divider"></div>
     
-        <div class="contact">
+        <div id="contact">
             <div class="header">
                 <p class="head">Get in touch</p>
                 <p class="undertext">Contact</p>
@@ -315,6 +325,12 @@
 
     <footer>
     </footer>
-   
+    <script>
+        function toggleSidebar() {
+            var sidebar = document.querySelector('.sidebar');
+            sidebar.style.width = sidebar.style.width === '250px' ? '0' : '250px';
+            // You can adjust the width value based on your actual sidebar width
+        }
+    </script>
 </body>
 </html>

@@ -85,10 +85,10 @@ img {
 }
 
 /*Side panel*/
-.side {
+.sidebar {
     box-sizing: border-box;
     float: left;
-    width: 250px;
+    width: 250;
     background-color:var(--menu-color);
     color: var(--main-text-color);
     margin-top: 70px;
@@ -105,13 +105,38 @@ img {
     left: 0; 
     height: 100%;
     z-index: 0;
+    transition: 0.5s;
 }
 
-.side li {
-    list-style-type: none;
+.sidebar .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
 }
 
-.side li a {
+.openbtn {
+    font-size: 20px;
+    cursor: pointer;
+    background-color: #111;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+}
+
+#main {
+    transition: margin-left 0.5s; /* If you want a transition effect */
+    padding: 20px;
+  }
+  
+  /* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
+  @media screen and (max-height: 450px) {
+    .sidebar {padding-top: 15px;}
+    .sidebar a {font-size: 18px;}
+  }
+
+.sidebar a {
     display: flex;
     background-attachment: scroll;
     background-clip: border-box;
@@ -135,6 +160,8 @@ img {
     margin-top: 30px;
     margin-left: 15px;
     position: relative;
+    list-style-type: none;
+    transition: 0.3s;
 }
 
 a:link, a:visited {
@@ -155,7 +182,7 @@ main{
 }
 
 /*Home section*/
-.home{
+#home{
     text-align: center;
     background-image: url(home_background-img-70.png);
     background-position: center;
@@ -177,7 +204,6 @@ h1{
     margin-bottom: 8px;
     margin-block-end: 8px;
     margin-block-start: 0px;
-    text-size-adjust: 100%;
 }
 
 .location {
@@ -190,7 +216,6 @@ h1{
     margin-bottom: 8px;
     margin-block-end: 8px;
     margin-block-start: 0px;
-    text-size-adjust: 100%;
 }
 
 .intro {
@@ -231,8 +256,6 @@ h1{
     text-decoration-color: var(--dark-green);
     text-decoration-line: none;
     text-decoration-style: solid;
-    text-decoration-thickness: auto;
-    text-size-adjust: 100%; 
     vertical-align: middle;
 }
 
@@ -258,7 +281,7 @@ h1{
 }
 
 /*sections with dark background*/
-.about, .skills, .services, .contact {
+#about, #skills, #services, #contact {
     height: 700px;
     width: 100%;
     background-color: var(--dark-background-color);
@@ -266,8 +289,8 @@ h1{
     padding: 24px 0px;
 }
 
-/*sections with light bacground*/
-.projects, .recommendations {
+/*sections with light background*/
+#projects, #recommendations {
     height: 700px;
     width: 100%;
     background-color: var(--light-background-color);
@@ -275,7 +298,7 @@ h1{
     padding: 24px 0px;
 }
 
-.resume {
+#resume {
     height: 740px;
     width: 100%;
     background-color: var(--light-background-color);
@@ -297,7 +320,6 @@ h1{
     overflow-x: hidden;
     overflow-y: hidden;
     padding: 0px 0px;
-    text-size-adjust: 100%;
 }
 
 .head {
@@ -317,7 +339,6 @@ h1{
     margin-bottom: 36px;
     position: absolute;
     text-align: center;
-    text-size-adjust: 100%;
 }
 
 .undertext {
@@ -336,7 +357,6 @@ h1{
     margin-top: 0px;
     opacity: 0.1;
     text-align: center;
-    text-size-adjust: 100%;
     text-transform: uppercase;
     letter-spacing: 7px;
 }
@@ -353,7 +373,6 @@ h2 {
     margin-bottom: 8px;
     margin-block-end: 8px;
     margin-block-start: 0px;
-    text-size-adjust: 100%;
 }
 
 .text {
@@ -369,7 +388,6 @@ h2 {
     margin-right: 36px;
     margin-block-end: 8px;
     margin-block-start: 0px;
-    text-size-adjust: 100%;
 }
 
 /*Years grid*/
@@ -404,6 +422,9 @@ h2 {
     padding: 0px 12px;
     position: relative;
     text-align: center;
+}
+
+.col-1, .col-2 {
     border-right-color: var(--light-background-color);
     border-right-style: solid;
     border-right-width: 1.6px;
@@ -560,3 +581,78 @@ h4 {
   }
 
 /*Recommendation*/
+.swiper {
+    z-index: 0;
+    position: relative;
+    box-sizing: border-box;
+    margin-left: 50px;
+    margin-right: 50px;
+    text-align: start;
+}
+
+.swiper-wrapper {
+    max-width: calc(100% - 80px); /* Adjust the maximum width as needed */
+    margin: 0 auto;
+    display: flex;
+    gap: 40px;
+}
+
+.swiper-slide {
+    box-sizing: border-box;
+    background-color: var(--dark-background-color);
+    border-top-color: var(--back-text-color);
+    border-top-right-radius: 6px;
+    border-top-left-radius: 6px;
+    border-top-style: solid;
+    border-top-width: 0.8px;
+    border-bottom-color: var(--back-text-color);
+    border-bottom-right-radius: 6px;
+    border-bottom-left-radius: 6px;
+    border-bottom-style: solid;
+    border-bottom-width: 0.8px;
+    border-right-color: var(--back-text-color);
+    border-right-style: solid;
+    border-right-width: 0.8px;    
+    border-left-color: var(--back-text-color);
+    border-left-style: solid;
+    border-left-width: 0.8px;
+    width: calc(50% - 20px);
+}
+
+.firm {
+    color: var(--light-green);
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.divider-recommendations {
+    background-color: var(--dark-green);
+    height: 3px;
+    width: 200px;
+}
+
+.swiper-button-prev,
+.swiper-button-next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 30px; /* Adjust the width as needed */
+    height: 30px; /* Adjust the height as needed */
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    z-index: 1; /* Place the buttons above the content */
+}
+
+.swiper-button-prev {
+    left: 10px; /* Adjust the left position as needed */
+    margin-right: 15px;
+}
+
+.swiper-button-next {
+    right: 10px; /* Adjust the right position as needed */
+    margin-left: 15px;
+}
+
