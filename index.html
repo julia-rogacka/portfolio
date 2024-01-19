@@ -5,12 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>PR QCE</title>
     <link href="style.css" rel="stylesheet">
+    <link rel="stylesheet" href="C:\\Users\\User\\portfolio_website\\portfolio\\style.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap" rel="stylesheet">
+    <script src="script.js"></script>
 </head>
 <body>
     <menu>
         <div class="top">
-            <img src="c:\Users\User\Desktop\portfolio-website\logo (3).png" alt="PR">
+            <img src="logo (3).png" alt="PR">
             <ul class="logo">
                 <li class="q">Quality</li>
                 <li class="c">Consulting</li>
@@ -21,7 +23,7 @@
         <div class="container">
             <nav>
                 <div id="mySidebar" class="sidebar">
-                    <button class="openbtn" onclick="toggleSidebar()">☰</button>
+                    
                     <a class="active" href="#home">home</a>
                     <a href="#about">about me</a>
                     <a href="#resume">resume</a>
@@ -31,21 +33,23 @@
                     <a href="#recommendations">recommendations</a>
                     <a href="#contact">contact</a>
                 </div>
-                <div id="main">
-                    <button class="openbtn" onclick="openNav()">&#9776; Open Sidebar</button>
-                </div>
             </nav>
         </div>
     </menu>
 
     <main>
         <div id="home">
+            <div id="main">
+                <button class="openbtn" onclick="toggleSidebar()">☰</button>
+            </div>
+
             <div class="intro">
                 <h1>Welcome</h1>
                 <p id="app">I'm freelancer</p>
                 <p class="location">Based in Szczecin, Poland.</p>
                 <a href="#contact" class="hire">Hire me</a>
             </div>
+            
         </div>
 
         <div class="divider"></div>
@@ -319,6 +323,16 @@
                 <p class="head">Get in touch</p>
                 <p class="undertext">Contact</p>
             </div>
+
+            <div class="container-contact">
+                <form onsubmit="sendEmail(); reset(); return false">
+                    <p>send me a message</p>
+                    <input type="text" id="name" placeholder="Your Name" required>
+                    <input type="text" id="email" placeholder="Email id" required>
+                    <textarea id="message" rows="15" placeholder="How can i help you?" required></textarea>
+                    <button type="submit" id="submit">Send</button>
+                </form>
+            </div>
         </div>
 
     </main>
@@ -328,9 +342,32 @@
     <script>
         function toggleSidebar() {
             var sidebar = document.querySelector('.sidebar');
-            sidebar.style.width = sidebar.style.width === '250px' ? '0' : '250px';
-            // You can adjust the width value based on your actual sidebar width
+            var openbtn = document.querySelector('.openbtn');
+            
+            if (sidebar.style.width === '250px') {
+                sidebar.style.width = '0';
+                openbtn.innerHTML = '☰';
+            } else {
+                sidebar.style.width = '250px';
+                openbtn.innerHTML = '☰';
+            }
         }
-    </script>
+    </script>  
+    <script scr="https://smtpjs.com/v3/smtp.js"></script>  
+    <script>
+        function sendEmail() {
+            Email.send({
+            Host : "smtp.gmail.com",
+            Username : "julkarogacka@gmail.com",
+            Password : "password",
+            To : 'julkarogacka@gmail.com',
+            From : document.getElementById("email").value,
+            Subject : "New Message from the website",
+            Body : "Name: " + document.getElementById("name").value + "<br>Email: " + document.getElementById("email").value + "<br>Message: " + document.getElementById("message").value
+        }).then(
+            message => alert("Message Sent Successfully")
+        );
+    }   
+    </script> 
 </body>
 </html>

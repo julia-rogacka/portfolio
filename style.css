@@ -74,7 +74,6 @@ img {
     color:rgba(236, 235, 229, 0.75);
     box-sizing: border-box;
     margin-top: 20px;
-    
 }
 
 .q, .c, .e, .dot {
@@ -85,21 +84,41 @@ img {
 }
 
 /*Side panel*/
+@media only screen and (max-width: 600px) {
+    .sidebar {
+        width: 0;
+    }
+
+    .sidebar a {
+        display: none;
+    }
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+}
+
+.container{
+    display: flex;
+}
+
 .sidebar {
     box-sizing: border-box;
     float: left;
-    width: 250;
     background-color:var(--menu-color);
     color: var(--main-text-color);
     margin-top: 70px;
     padding: 20px;
     padding-left: 0px;
     font-size: 16px;
-    font-weight: 400;
+    font-weight: 600;
     line-height: 24px;
     text-transform: uppercase;
     list-style-position: outside;
-    overflow-x: hidden;
+    overflow: hidden;
     position: fixed; 
     top: 0;
     left: 0; 
@@ -108,7 +127,7 @@ img {
     transition: 0.5s;
 }
 
-.sidebar .closebtn {
+.closebtn {
     position: absolute;
     top: 0;
     right: 25px;
@@ -119,21 +138,16 @@ img {
 .openbtn {
     font-size: 20px;
     cursor: pointer;
-    background-color: #111;
-    color: white;
+    background-color: var(--menu-color);
+    color: var(--main-text-color);
     padding: 10px 15px;
     border: none;
+    align-items: left;
 }
 
 #main {
-    transition: margin-left 0.5s; /* If you want a transition effect */
+    transition: margin-left 0.5s; 
     padding: 20px;
-  }
-  
-  /* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
-  @media screen and (max-height: 450px) {
-    .sidebar {padding-top: 15px;}
-    .sidebar a {font-size: 18px;}
   }
 
 .sidebar a {
@@ -154,7 +168,7 @@ img {
     border-color: var(--light-background-color);
     border-style: solid;
     font-size: 16px;
-    font-weight: 500;
+    font-weight: 600;
     letter-spacing: 1px;
     line-height: 12px;
     margin-top: 30px;
@@ -165,11 +179,11 @@ img {
 }
 
 a:link, a:visited {
-    color: #ECEBE5;
+    color: var(--main-text-color);
 }
 
 a:hover, a:active {
-    color:#4EDF86;
+    color: var(--main-text-color);
 }
 
 /*Main panel*/
@@ -656,3 +670,55 @@ h4 {
     margin-left: 15px;
 }
 
+/*Contact form*/
+.container-contact {
+    width: 100%;
+    height: 100vh;
+    background-color: var(--dark-background-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+form {
+    background-color: var(--light-background-color);
+    display: flex;
+    flex-direction: column;
+    padding: 2vw 4vw;
+    width: 90%;
+    max-width: 600px;
+    border-radius: 10px;
+}
+
+form p {
+    color: var(--dark-green);
+    font-size: 36px;
+    font-weight: 600;
+    text-transform: uppercase;
+    margin-bottom: 36px;
+    margin-top: 20px;
+}
+
+form input, form textarea {
+    background-color: var(--light-background-color);
+    border: solid 2px var(--dark-green);
+    padding: 10px;
+    margin-bottom: 20px;
+    font-size: 18px;
+    font-weight: 400;
+    color: var(--main-text-color);
+}
+
+form button {
+    background-color: var(--dark-green);
+    border: none;
+    padding: 10px;
+    font-size: 18px;
+    font-weight: 400;
+    color: var(--main-text-color);
+    cursor: pointer;
+    width: 200px;
+    margin-top: 20px auto 0;
+    border-radius: 30px;
+    align-self: center;
+}
