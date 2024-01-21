@@ -34,18 +34,20 @@
                     <a href="#contact">contact</a>
                 </div>
             </nav>
+        </div> 
+        
+        <div id="main">
+            <button class="openbtn" onclick="toggleSidebar()">☰</button>
         </div>
     </menu>
 
     <main>
         <div id="home">
-            <div id="main">
-                <button class="openbtn" onclick="toggleSidebar()">☰</button>
-            </div>
+           
 
             <div class="intro">
                 <h1>Welcome</h1>
-                <p id="app">I'm freelancer</p>
+                <p id="demo">I am a Freelancer</p>
                 <p class="location">Based in Szczecin, Poland.</p>
                 <a href="#contact" class="hire">Hire me</a>
             </div>
@@ -385,13 +387,27 @@
     }   
     </script> 
     <script>
-        function validateForm() {
-  var x = document.forms["name"]["email"]["message"].value;
-  if (x == "") {
-    alert("Name must be filled out");
-    return false;
-  }
-}
+            function validateForm() {
+    var x = document.forms["name"]["email"]["message"].value;
+    if (x == "") {
+        alert("Name must be filled out");
+        return false;
+    }
+    }
+    </script>
+
+    <script>
+        var i = 0;
+    var txt = 'I am a Freelancer'; /* The text */
+    var speed = 50; /* The speed/duration of the effect in milliseconds */
+
+    function typeWriter() {
+        if (i < txt.length) {
+        document.getElementById("demo").innerHTML += txt.charAt(i);
+        i++;
+        setTimeout(typeWriter, speed);
+        }
+    }
     </script>
 </body>
 </html>

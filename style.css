@@ -97,6 +97,10 @@ img {
     .sidebar a {
         display: none;
     }
+
+    #main {
+        margin-left: 10px;
+    }
 }
 
 nav {
@@ -153,6 +157,8 @@ nav {
 #main {
     transition: margin-left 0.5s; 
     padding: 20px;
+    margin-left: 250px;
+    margin-top: 50px;
   }
 
 .sidebar a {
@@ -239,6 +245,14 @@ h1{
 
 .intro {
     margin-top: 80px;
+}
+
+#demo {
+    box-sizing: border-box;
+    color: var(--light-green);
+    font-size: 36px;
+    font-weight: 800;
+    letter-spacing: 1px;
 }
 
 /*button*/
