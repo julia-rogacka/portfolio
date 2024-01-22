@@ -1,17 +1,34 @@
 :root {
     --dark-background-color: #212529;
     --light-background-color: #343A40;
-    --menu-color: #111418;
     --top-color: #02030C;
     --back-text-color: #ffffff80;
     --main-text-color: #ECEBE5;
     --light-green: #4edf86;
     --dark-green: #21cc7f;
+    background-image: url(home_background-img-70.png);
 }
 
 * {
     font-family: 'Poppins', sans-serif;
 }
+
+@media only screen and (max-width: 800px) {
+   body {
+    width: 100%;
+    
+   }
+
+   .sidebar {
+    display: none;
+   }
+
+   #home, #about, #skills, #services, #projects, #recommendations, #contact {
+    height: 100%;
+    width: fit-content;
+   }
+}
+
 
 .divider {
     height: 20px;
@@ -25,18 +42,9 @@ html {
 body{
     margin: 0;
     padding: 0;
-    background-color: var(--menu-color);
-    display: grid;
-    grid-template-columns: 260px 1fr; /* Sidebar takes 250px, the rest is for content */
-    grid-template-rows: 100vh; 
+    display: flex;
     overflow-y: scroll;
     overflow-x: hidden;
-    
-}
-
-.container {
-    display: flex;
-    flex: 1;
 }
 
 menu{
@@ -61,7 +69,7 @@ menu{
     position: fixed; 
     top: 0; 
     width: 100%;
-    z-index: 1;
+    z-index: 999;
 }
 
 img {
@@ -88,21 +96,9 @@ img {
     font-size: 28px;
 }
 
+
+
 /*Side panel*/
-@media only screen and (max-width: 600px) {
-    .sidebar {
-        width: 0;
-    }
-
-    .sidebar a {
-        display: none;
-    }
-
-    #main {
-        margin-left: 10px;
-    }
-}
-
 nav {
     display: flex;
     justify-content: space-between;
@@ -110,25 +106,22 @@ nav {
     padding: 10px;
 }
 
-.container{
-    display: flex;
-}
-
 .sidebar {
     box-sizing: border-box;
     float: left;
-    background-color:var(--menu-color);
+    background-color:#111418;
     color: var(--main-text-color);
     margin-top: 70px;
     padding: 20px;
     padding-left: 0px;
     font-size: 16px;
     font-weight: 600;
+    position: fixed;
     line-height: 24px;
     text-transform: uppercase;
     list-style-position: outside;
     overflow: hidden;
-    position: fixed; 
+    width: 250px;
     top: 0;
     left: 0; 
     height: 100%;
@@ -168,7 +161,6 @@ nav {
     text-decoration: none;
     background-size: auto;
     padding: 16px;
-    display: flex;
     flex-direction: column;
     text-align: start;
     border: 0.8px;
@@ -209,7 +201,6 @@ main{
 /*Home section*/
 #home{
     text-align: center;
-    background-image: url(home_background-img-70.png);
     background-position: center;
     background-size: cover;
     height: 100vh;
