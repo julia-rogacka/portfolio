@@ -610,10 +610,9 @@ h4 {
 }
 
 .swiper-wrapper {
-    max-width: calc(100% - 80px); /* Adjust the maximum width as needed */
+    width: 100%;
     margin: 0 auto;
     display: flex;
-    gap: 40px;
 }
 
 .swiper-slide {
@@ -635,7 +634,7 @@ h4 {
     border-left-color: var(--back-text-color);
     border-left-style: solid;
     border-left-width: 0.8px;
-    width: calc(50% - 20px);
+    width: 90%;
 }
 
 .firm {
@@ -647,32 +646,7 @@ h4 {
 .divider-recommendations {
     background-color: var(--dark-green);
     height: 3px;
-    width: 200px;
-}
-
-.swiper-button-prev,
-.swiper-button-next {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    width: 30px; /* Adjust the width as needed */
-    height: 30px; /* Adjust the height as needed */
-    border-radius: 50%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    cursor: pointer;
-    z-index: 1; /* Place the buttons above the content */
-}
-
-.swiper-button-prev {
-    left: 10px; /* Adjust the left position as needed */
-    margin-right: 15px;
-}
-
-.swiper-button-next {
-    right: 10px; /* Adjust the right position as needed */
-    margin-left: 15px;
+    width: 50%;
 }
 
 /*Services section*/
@@ -1069,6 +1043,34 @@ form button {
      overflow: hidden;
      margin-bottom: 8px;
      padding: 0 10px;
+     font-size: 16px;
     }
 
+    .swiper {
+        height: 70%;
+        margin-left: 0px;
+        margin-right: 0px;
+        padding: 10px;
+        overflow-y: scroll;
+    }
+
+    .swiper-wrapper {
+        width: 90%;
+        height: 80%;
+        margin: 0 auto;
+        display: flex;
+        flex-direction: column;
+        z-index: 0;
+    }
+
+    .swiper-slide {
+        width: 100%;
+        height: 70%;
+        margin-bottom: 15px;
+        font-size: 16px;
+    }
+
+    .contact {
+        z-index: 1;
+    }
 }
