@@ -6,7 +6,6 @@
     --main-text-color: #ECEBE5;
     --light-green: #4edf86;
     --dark-green: #21cc7f;
-    background-image: url(home_background-img-70.png);
 }
 
 * {
@@ -21,11 +20,19 @@
     .openbtn {
         display: none;
     }
+
+    body {
+        width: 100vw;
+    }
 }
 
 @media only screen and (max-width: 800px) {
    body {
     width: 100%;
+   }
+
+   .container {
+    display: none;
    }
 
     .logo {
@@ -60,7 +67,6 @@
         z-index: 999;
         width: 60vw;
         height: 40vh;
-        overflow: hidden;
   }
 
     .topnav a {
@@ -98,17 +104,13 @@
         color: var(--dark-green);
     }
 
-   body {
-    width: 100%;
-   }
-
    .sidebar {
     display: none;
    }
 
    #home, #about, #skills, #services, #projects, #recommendations, #contact {
-    height: 100%;
-    width: fit-content;
+    height: 100vh;
+    width: 100vw;
    }
 }
 
@@ -127,6 +129,7 @@ body{
     display: flex;
     overflow-y: scroll;
     overflow-x: hidden;
+    background-color: #111418;
 }
 
 menu{
@@ -179,20 +182,6 @@ img {
 }
 
 /*Side panel*/
-@media only screen and (max-width: 600px) {
-    .sidebar {
-        width: 0;
-    }
-
-    .sidebar a {
-        display: none;
-    }
-
-    #main {
-        margin-left: 10px;
-    }
-}
-
 nav {
     display: flex;
     justify-content: space-between;
@@ -207,7 +196,7 @@ nav {
 .sidebar {
     box-sizing: border-box;
     float: left;
-    background-color:var(--menu-color);
+    background-color:#111418;
     color: var(--main-text-color);
     margin-top: 70px;
     padding: 20px;
@@ -225,31 +214,6 @@ nav {
     z-index: 0;
     transition: 0.5s;
 }
-
-.closebtn {
-    position: absolute;
-    top: 0;
-    right: 25px;
-    font-size: 36px;
-    margin-left: 50px;
-}
-
-.openbtn {
-    font-size: 20px;
-    cursor: pointer;
-    background-color: var(--menu-color);
-    color: var(--main-text-color);
-    padding: 10px 15px;
-    border: none;
-    align-items: left;
-}
-
-#main {
-    transition: margin-left 0.5s; 
-    padding: 20px;
-    margin-left: 250px;
-    margin-top: 50px;
-  }
 
 .sidebar a {
     display: flex;
