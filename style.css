@@ -27,12 +27,11 @@
     }
 
     .main {
-        width: calc(100% - 250px);
-        margin-left: 250px; 
+        width: 90%
     }
 
     menu {
-        width: 250px;
+        width: 10%;
     }
 }
 
@@ -148,9 +147,8 @@ body{
     background-color: #111418;
 }
 
-.main {
-    width: 100%; 
-    transition: margin-left 0.5s;
+menu {
+    width: 10%;
 }
 
 /*Top panel*/
@@ -273,11 +271,10 @@ main {
     color: var(--main-text-color);
     font-size: 16px;
     font-weight: 400;
-    width: 100%;
+    width: 90%;
     margin-left: 0px;
     transition: 0.5s;
 }
-
 
 /*Home section*/
 #home{
@@ -285,8 +282,7 @@ main {
     background-image: url(home_background-img-70.png);
     background-position: center;
     background-size: cover;
-    width: 100%;
-    min-height: max-content;
+    height: 12.5%;
     padding-top: 105px;
     text-align: center;
 }
@@ -387,8 +383,7 @@ h1{
 
 /*sections with dark background*/
 #about, #skills, #services, #contact {
-    width: 100%;
-    min-height: max-content;
+    height: 12.5%;
     background-color: var(--dark-background-color);
     text-align: center;
     padding: 24px 0px;
@@ -397,8 +392,7 @@ h1{
 
 /*sections with light background*/
 #projects, #recommendations {
-    width: 100%;
-    min-height: max-content;
+    height: 12.5%;
     background-color: var(--light-background-color);
     text-align: center;
     padding: 24px 0px;
@@ -406,8 +400,7 @@ h1{
 }
 
 #resume {
-    width: 100%;
-    min-height: max-content;
+    height: 12.5%;
     background-color: var(--light-background-color);
     text-align: center;
     padding: 24px 0px;
