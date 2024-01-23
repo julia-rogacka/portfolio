@@ -18,20 +18,6 @@
                 <li class="c">Consulting</li>
                 <li class="e">Engineering</li>
             </ul>
-            
-            <div class="topnav">
-                    
-                <a class="active" href="#home">home</a>
-                <a href="#about">about me</a>
-                <a href="#resume">resume</a>
-                <a href="#skills">skills</a>
-                <a href="#projects">projects</a>
-                <a href="#services">services</a>
-                <a href="#recommendations">recommendations</a>
-                <a href="#contact">contact</a>
-            </div>
-
-                <button class="openbtn" onclick="toggleTopnav()">☰</button>
         </div>
 
         <div class="container">
@@ -47,13 +33,18 @@
                     <a href="#recommendations">recommendations</a>
                     <a href="#contact">contact</a>
                 </div>
-
             </nav>
         </div> 
+        
+        <div id="main">
+            <button class="openbtn" onclick="toggleSidebar()">☰</button>
+        </div>
     </menu>
 
     <main>
         <div id="home">
+           
+
             <div class="intro">
                 <h1>Welcome</h1>
                 <p id="demo">I am a Freelancer</p>
@@ -366,12 +357,19 @@
     </main>
 
     <script>
-        function toggleTopnav() {
-            var topnav = document.querySelector('.topnav');
-           topnav.style.display = (topnav.style.display === 'flex') ? 'none' : 'flex';
+        function toggleSidebar() {
+            var sidebar = document.querySelector('.sidebar');
+            var openbtn = document.querySelector('.openbtn');
+            
+            if (sidebar.style.width === '250px') {
+                sidebar.style.width = '0';
+                openbtn.innerHTML = '☰';
+            } else {
+                sidebar.style.width = '250px';
+                openbtn.innerHTML = '☰';
+            }
         }
-    </script>
-    
+    </script>  
     <script scr="https://smtpjs.com/v3/smtp.js"></script>  
     <script>
         function sendEmail() {

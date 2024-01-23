@@ -1,19 +1,24 @@
 :root {
     --dark-background-color: #212529;
     --light-background-color: #343A40;
+    --menu-color: #111418;
     --top-color: #02030C;
     --back-text-color: #ffffff80;
     --main-text-color: #ECEBE5;
     --light-green: #4edf86;
     --dark-green: #21cc7f;
+<<<<<<< HEAD
     background-image: url(home_background-img-70.png);
     background-image: url(home_background-img-70.png);
+=======
+>>>>>>> parent of 0355239 (Fixed responsive topnav)
 }
 
 * {
     font-family: 'Poppins', sans-serif;
 }
 
+<<<<<<< HEAD
 @media only screen and (min-width: 800px) {
     .topnav {
         display: none;
@@ -112,6 +117,8 @@
    }
 }
 
+=======
+>>>>>>> parent of 0355239 (Fixed responsive topnav)
 .divider {
     height: 20px;
     width: max-content;
@@ -124,17 +131,24 @@ html {
 body{
     margin: 0;
     padding: 0;
-    display: flex;
+    background-color: var(--menu-color);
+    display: grid;
+    grid-template-columns: 260px 1fr; /* Sidebar takes 250px, the rest is for content */
+    grid-template-rows: 100vh; 
     overflow-y: scroll;
     overflow-x: hidden;
+    
+}
+
+.container {
+    display: flex;
+    flex: 1;
 }
 
 menu{
     width: 100vw;
     min-height: 100vh;
     padding-left: 0px;
-    height: 250px;
-    margin-bottom: 0px;
 }
 
 /*Top panel*/
@@ -153,7 +167,7 @@ menu{
     position: fixed; 
     top: 0; 
     width: 100%;
-    z-index: 999;
+    z-index: 1;
 }
 
 img {
@@ -173,16 +187,28 @@ img {
     margin-top: 20px;
 }
 
-.q, .c, .e {
+.q, .c, .e, .dot {
     display: inline-block;
     margin-right: 10px;
     margin-left: 10px;
     font-size: 28px;
 }
 
-
-
 /*Side panel*/
+@media only screen and (max-width: 600px) {
+    .sidebar {
+        width: 0;
+    }
+
+    .sidebar a {
+        display: none;
+    }
+
+    #main {
+        margin-left: 10px;
+    }
+}
+
 nav {
     display: flex;
     justify-content: space-between;
@@ -190,22 +216,25 @@ nav {
     padding: 10px;
 }
 
+.container{
+    display: flex;
+}
+
 .sidebar {
     box-sizing: border-box;
     float: left;
-    background-color:#111418;
+    background-color:var(--menu-color);
     color: var(--main-text-color);
     margin-top: 70px;
     padding: 20px;
     padding-left: 0px;
     font-size: 16px;
     font-weight: 600;
-    position: fixed;
     line-height: 24px;
     text-transform: uppercase;
     list-style-position: outside;
     overflow: hidden;
-    width: 250px;
+    position: fixed; 
     top: 0;
     left: 0; 
     height: 100%;
@@ -213,6 +242,13 @@ nav {
     transition: 0.5s;
 }
 
+.closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+}
 
 .openbtn {
     font-size: 20px;
@@ -238,6 +274,7 @@ nav {
     text-decoration: none;
     background-size: auto;
     padding: 16px;
+    display: flex;
     flex-direction: column;
     text-align: start;
     border: 0.8px;
@@ -263,7 +300,7 @@ a:link, a:visited {
 }
 
 a:hover, a:active {
-    color: var(--dark-green);
+    color: var(--main-text-color);
 }
 
 /*Main panel*/
@@ -278,6 +315,7 @@ main{
 /*Home section*/
 #home{
     text-align: center;
+    background-image: url(home_background-img-70.png);
     background-position: center;
     background-size: cover;
     height: 100vh;
@@ -388,7 +426,7 @@ h1{
     background-color: var(--dark-background-color);
     text-align: center;
     padding: 24px 0px;
-    padding-top: 85px;
+    padding-top: 105px;
 }
 
 /*sections with light background*/
