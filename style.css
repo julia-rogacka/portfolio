@@ -12,6 +12,7 @@
     font-family: 'Poppins', sans-serif;
 }
 
+/*Bigger screens*/
 @media only screen and (min-width: 800px) {
     .topnav {
         display: none;
@@ -24,11 +25,31 @@
     body {
         width: 100vw;
     }
+
+    .main {
+        width: calc(100% - 250px);
+        margin-left: 250px; 
+    }
+
+    menu {
+        width: 250px;
+    }
 }
 
+/*Smaller screens*/
 @media only screen and (max-width: 800px) {
    body {
+    width: 100vw;
+   }  
+   
+   #home, #about, #skills, #services, #projects, #recommendations, #contact {
+    height: 100vh;
+    width: 100vw;
+   }
+
+   .main {
     width: 100%;
+    margin-left: 0px;
    }
 
    .container {
@@ -51,7 +72,7 @@
     }
 
     .openbtn {
-        display: block;
+        display: inline-block;
         align-self: start;
    }
 
@@ -107,11 +128,6 @@
    .sidebar {
     display: none;
    }
-
-   #home, #about, #skills, #services, #projects, #recommendations, #contact {
-    height: 100vh;
-    width: 100vw;
-   }
 }
 
 .divider {
@@ -132,10 +148,9 @@ body{
     background-color: #111418;
 }
 
-menu{
-    width: 100vw;
-    min-height: 100vh;
-    padding-left: 0px;
+.main {
+    width: 100%; 
+    transition: margin-left 0.5s;
 }
 
 /*Top panel*/
@@ -145,6 +160,7 @@ menu{
     padding-bottom: 10px;
     padding-right: 16px;
     padding-left: 16px;
+    margin-left: 0px;
     background-color: var(--top-color);
     background-attachment: scroll;
     background-clip:border-box;
@@ -153,8 +169,8 @@ menu{
     overflow: hidden;
     position: fixed; 
     top: 0; 
-    width: 100%;
-    z-index: 1;
+    width: 100vw;
+    z-index: 999;
 }
 
 img {
@@ -186,7 +202,6 @@ nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 10px;
 }
 
 .container{
@@ -211,7 +226,7 @@ nav {
     top: 0;
     left: 0; 
     height: 100%;
-    z-index: 0;
+    z-index: 997;
     transition: 0.5s;
 }
 
@@ -252,13 +267,17 @@ a:hover, a:active {
 }
 
 /*Main panel*/
-main{
+main {
     margin-top: 100px;
     padding: 0px;
     color: var(--main-text-color);
     font-size: 16px;
     font-weight: 400;
+    width: 100%;
+    margin-left: 0px;
+    transition: 0.5s;
 }
+
 
 /*Home section*/
 #home{
@@ -266,9 +285,8 @@ main{
     background-image: url(home_background-img-70.png);
     background-position: center;
     background-size: cover;
-    height: 100vh;
     width: 100%;
-    height:700px;
+    min-height: max-content;
     padding-top: 105px;
     text-align: center;
 }
@@ -369,8 +387,8 @@ h1{
 
 /*sections with dark background*/
 #about, #skills, #services, #contact {
-    height: 700px;
     width: 100%;
+    min-height: max-content;
     background-color: var(--dark-background-color);
     text-align: center;
     padding: 24px 0px;
@@ -379,8 +397,8 @@ h1{
 
 /*sections with light background*/
 #projects, #recommendations {
-    height: 700px;
     width: 100%;
+    min-height: max-content;
     background-color: var(--light-background-color);
     text-align: center;
     padding: 24px 0px;
@@ -388,8 +406,8 @@ h1{
 }
 
 #resume {
-    height: 740px;
     width: 100%;
+    min-height: max-content;
     background-color: var(--light-background-color);
     text-align: center;
     padding: 24px 0px;
