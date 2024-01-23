@@ -1,16 +1,110 @@
 :root {
     --dark-background-color: #212529;
     --light-background-color: #343A40;
-    --menu-color: #111418;
     --top-color: #02030C;
     --back-text-color: #ffffff80;
     --main-text-color: #ECEBE5;
     --light-green: #4edf86;
     --dark-green: #21cc7f;
+    background-image: url(home_background-img-70.png);
 }
 
 * {
     font-family: 'Poppins', sans-serif;
+}
+
+@media only screen and (min-width: 800px) {
+    .topnav {
+        display: none;
+    } 
+
+    .openbtn {
+        display: none;
+    }
+}
+
+@media only screen and (max-width: 800px) {
+   body {
+    width: 100%;
+   }
+
+    .logo {
+        display: none;
+    }
+
+    .top {
+        z-index: 998;
+    }
+
+    .top img {
+        width: 150px;
+        height: 50px;
+    }
+
+    .openbtn {
+        display: block;
+        align-items: flex-end;
+   }
+
+   .topnav {
+        display: none;
+        flex-direction: column;
+        position: relative;
+        background-position-y: center;
+        top: 60px;
+        left: 0;
+        width: 100%;
+        background-color: #111418;
+        border: 1px solid var(--light-background-color);
+        z-index: 999;
+        width: 60vw;
+        height: 40vh;
+        overflow: hidden;
+  }
+
+    .topnav a {
+        width: 50vw;
+        display: flex;
+        text-decoration: none;
+        background-size: auto;
+        padding: 8px;
+        flex-direction: column;
+        text-transform: uppercase;
+        text-align: start;
+        border: 0.8px solid var(--light-background-color);
+        border-bottom-left-radius: 5px;
+        border-bottom-right-radius: 5px;
+        border-top-right-radius: 5px;
+        border-top-left-radius: 5px;
+        font-size: 16px;
+        font-weight: 600;
+        color: var(--main-text-color);
+        letter-spacing: 1px;
+        line-height: 12px;
+        margin-top: 6px;
+        margin-left: 4px;
+        position: relative;
+        list-style-type: none;
+        transition: 0.3s;
+    }
+
+    .topnav a:link, .topnav a:visited {
+        color: var(--main-text-color);
+        transition: color 0.3s;
+    }
+    
+    .topnav a:hover, .topnav a:active {
+        color: var(--dark-green);
+    }
+
+   .sidebar {
+    display: none;
+   }
+
+   #home, #about, #skills, #services, #projects, #recommendations, #contact {
+    height: 100%;
+    width: fit-content;
+   }
 }
 
 .divider {
@@ -25,24 +119,17 @@ html {
 body{
     margin: 0;
     padding: 0;
-    background-color: var(--menu-color);
-    display: grid;
-    grid-template-columns: 260px 1fr; /* Sidebar takes 250px, the rest is for content */
-    grid-template-rows: 100vh; 
+    display: flex;
     overflow-y: scroll;
     overflow-x: hidden;
-    
-}
-
-.container {
-    display: flex;
-    flex: 1;
 }
 
 menu{
     width: 100vw;
     min-height: 100vh;
     padding-left: 0px;
+    height: 250px;
+    margin-bottom: 0px;
 }
 
 /*Top panel*/
@@ -61,7 +148,7 @@ menu{
     position: fixed; 
     top: 0; 
     width: 100%;
-    z-index: 1;
+    z-index: 999;
 }
 
 img {
@@ -81,28 +168,16 @@ img {
     margin-top: 20px;
 }
 
-.q, .c, .e, .dot {
+.q, .c, .e {
     display: inline-block;
     margin-right: 10px;
     margin-left: 10px;
     font-size: 28px;
 }
 
+
+
 /*Side panel*/
-@media only screen and (max-width: 600px) {
-    .sidebar {
-        width: 0;
-    }
-
-    .sidebar a {
-        display: none;
-    }
-
-    #main {
-        margin-left: 10px;
-    }
-}
-
 nav {
     display: flex;
     justify-content: space-between;
@@ -110,25 +185,22 @@ nav {
     padding: 10px;
 }
 
-.container{
-    display: flex;
-}
-
 .sidebar {
     box-sizing: border-box;
     float: left;
-    background-color:var(--menu-color);
+    background-color:#111418;
     color: var(--main-text-color);
     margin-top: 70px;
     padding: 20px;
     padding-left: 0px;
     font-size: 16px;
     font-weight: 600;
+    position: fixed;
     line-height: 24px;
     text-transform: uppercase;
     list-style-position: outside;
     overflow: hidden;
-    position: fixed; 
+    width: 250px;
     top: 0;
     left: 0; 
     height: 100%;
@@ -136,13 +208,6 @@ nav {
     transition: 0.5s;
 }
 
-.closebtn {
-    position: absolute;
-    top: 0;
-    right: 25px;
-    font-size: 36px;
-    margin-left: 50px;
-}
 
 .openbtn {
     font-size: 20px;
@@ -168,7 +233,6 @@ nav {
     text-decoration: none;
     background-size: auto;
     padding: 16px;
-    display: flex;
     flex-direction: column;
     text-align: start;
     border: 0.8px;
@@ -194,7 +258,7 @@ a:link, a:visited {
 }
 
 a:hover, a:active {
-    color: var(--main-text-color);
+    color: var(--dark-green);
 }
 
 /*Main panel*/
@@ -209,7 +273,6 @@ main{
 /*Home section*/
 #home{
     text-align: center;
-    background-image: url(home_background-img-70.png);
     background-position: center;
     background-size: cover;
     height: 100vh;
@@ -320,7 +383,7 @@ h1{
     background-color: var(--dark-background-color);
     text-align: center;
     padding: 24px 0px;
-    padding-top: 105px;
+    padding-top: 85px;
 }
 
 /*sections with light background*/
