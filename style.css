@@ -574,6 +574,18 @@ h4 {
     margin-top: 20px;
   }
 
+  .container-skills li {
+    color: var(--main-text-color);
+    font-size: 18px;
+    font-weight: 400;
+    margin-bottom: 10px;
+    list-style-type: disc;
+  }
+
+  .container-skills li::marker {
+    color: var(--dark-green);
+  }
+
 /*Projects section*/
 .projects-container {
     display: flex;
@@ -1007,4 +1019,26 @@ form button {
    .description {
     display: none;
    }
+
+   .container-skills{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 10px;
+    height: 85%;
+    width: 95%;
+    overflow: hidden;
+    margin-bottom: 8px;
+    padding: 0 10px;
+   }
+
+   .hard-skills, .soft-skills {
+    width: 100%;
+    height: 20vh;
+    margin-right: 0px;
+    margin-left: 0px;
+    margin-bottom: 15px;
+    padding-bottom: 0px;
+   }
+
 }
