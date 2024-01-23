@@ -13,7 +13,7 @@
 }
 
 /*Bigger screens*/
-@media only screen and (min-width: 768px) {
+@media only screen and (min-width: 601px) {
     .topnav {
         display: none;
     } 
@@ -36,7 +36,7 @@
 }
 
 /*Smaller screens*/
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 600px) {
    body {
     width: 100vw;
    }  
@@ -68,6 +68,7 @@
         z-index: 998;
         display: flex;
         justify-content: space-between;
+        position: fixed;
     }
 
     .top img {
@@ -133,7 +134,50 @@
    .sidebar {
     display: none;
    }
+
+   #home {
+    padding-top: 0px;
+    align-items: center;
+   }
+
+   h1{
+    font-size: 26px;
+    }
+
+.location {
+    font-size: 18px;
+    }
+
+   #demo {
+   font-size: 22px;
+   }
+
+   .divider {
+    height: 5%;
+    width: max-content;
+   }
+
+   .column-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 auto;
+    height: 100%;
+    overflow: hidden;
+    margin-bottom: 26px;
+   }
+
+   .education, .experience {
+    flex: 1; 
+    overflow-y: scroll;
+    width: 100%;
+    align-items: center;
+    margin-right: 0px;
+    margin-left: 0px;
+    margin-bottom: 26px;
+   }
 }
+
 
 .divider {
     height: 20px;
