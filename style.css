@@ -13,7 +13,7 @@
 }
 
 /*Bigger screens*/
-@media only screen and (min-width: 800px) {
+@media only screen and (min-width: 768px) {
     .topnav {
         display: none;
     } 
@@ -36,7 +36,7 @@
 }
 
 /*Smaller screens*/
-@media only screen and (max-width: 800px) {
+@media only screen and (max-width: 768px) {
    body {
     width: 100vw;
    }  
@@ -46,9 +46,14 @@
     width: 100vw;
    }
 
-   .main {
+   main {
     width: 100%;
     margin-left: 0px;
+   }
+
+   menu {
+    width: 0%;
+    padding: 0px;
    }
 
    .container {
@@ -66,8 +71,9 @@
     }
 
     .top img {
-        width: 150px;
-        height: 50px;
+        width: 120px;
+        height: 40px;
+
     }
 
     .openbtn {
@@ -148,7 +154,7 @@ body{
 }
 
 menu {
-    width: 10%;
+    padding-left: 0px;
 }
 
 /*Top panel*/
@@ -844,7 +850,7 @@ form {
     border-radius: 10px;
 }
 
-form p {
+.container-contact p {
     color: var(--dark-green);
     font-size: 36px;
     font-weight: 600;

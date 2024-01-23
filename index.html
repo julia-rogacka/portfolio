@@ -352,13 +352,18 @@
             </div>
 
             <div class="container-contact">
-                <form onsubmit="sendEmail(); reset(); return false">
+                <form action="https://api.web3forms.com/submit" method="POST">
                     <p>send me a message</p>
-                    <input type="text" id="name" placeholder="Your Name" required>
-                    <input type="text" id="email" placeholder="Email id" required>
-                    <textarea id="message" rows="15" placeholder="How can i help you?" required></textarea>
-                    <button type="submit" id="submit">Send</button>
+                    <input type="hidden" name="access_key" value="d9711f72-e15d-4eed-87ea-4a23354ab957">
+                
+                    <input type="text" name="name" placeholder="Your Name">
+                    <input type="email" name="email" placeholder="Email id">
+                    <textarea name="message" rows="12" placeholder="How can I help you?"></textarea>
+                    
+                    <button type="submit">Submit</button>
+                
                 </form>
+                
             </div>
         </div>
 
@@ -371,31 +376,20 @@
         }
     </script>  
 
-    <script scr="https://smtpjs.com/v3/smtp.js"></script>  
+<script src="https://web3forms.com/client/script.js" async defer></script>
+
     <script>
-        function sendEmail() {
-            Email.send({
-            Host : "smtp.gmail.com",
-            Username : "julkarogacka@gmail.com",
-            Password : "password",
-            To : 'julkarogacka@gmail.com',
-            From : document.getElementById("email").value,
-            Subject : "New Message from the website",
-            Body : "Name: " + document.getElementById("name").value + "<br>Email: " + document.getElementById("email").value + "<br>Message: " + document.getElementById("message").value
-        }).then(
-            message => alert("Message Sent Successfully")
-        );
-    }   
-    </script> 
+        function validateForm() {
+            var name = document.getElementById("name").value;
+            var email = document.getElementById("email").value;
+            var message = document.getElementById("message").value;
     
-    <script>
-            function validateForm() {
-    var x = document.forms["name"]["email"]["message"].value;
-    if (x == "") {
-        alert("Name must be filled out");
-        return false;
-    }
-    }
+                if (name === "" || email === "" || message === "") {
+                    alert("The field must be filled out");
+                    return false;
+                 }
+            }
     </script>
+
 </body>
 </html>
