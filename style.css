@@ -7,18 +7,12 @@
     --main-text-color: #ECEBE5;
     --light-green: #4edf86;
     --dark-green: #21cc7f;
-<<<<<<< HEAD
-    background-image: url(home_background-img-70.png);
-    background-image: url(home_background-img-70.png);
-=======
->>>>>>> parent of 0355239 (Fixed responsive topnav)
 }
 
 * {
     font-family: 'Poppins', sans-serif;
 }
 
-<<<<<<< HEAD
 @media only screen and (min-width: 800px) {
     .topnav {
         display: none;
@@ -117,8 +111,6 @@
    }
 }
 
-=======
->>>>>>> parent of 0355239 (Fixed responsive topnav)
 .divider {
     height: 20px;
     width: max-content;
