@@ -1,12 +1,12 @@
 :root {
     --dark-background-color: #212529;
     --light-background-color: #343A40;
-    --menu-color: #111418;
     --top-color: #02030C;
     --back-text-color: #ffffff80;
     --main-text-color: #ECEBE5;
     --light-green: #4edf86;
     --dark-green: #21cc7f;
+    background-image: url(home_background-img-70.png);
 }
 
 * {
@@ -97,6 +97,7 @@
     .topnav a:hover, .topnav a:active {
         color: var(--dark-green);
     }
+
    body {
     width: 100%;
    }
@@ -123,18 +124,9 @@ html {
 body{
     margin: 0;
     padding: 0;
-    background-color: var(--menu-color);
-    display: grid;
-    grid-template-columns: 260px 1fr; /* Sidebar takes 250px, the rest is for content */
-    grid-template-rows: 100vh; 
+    display: flex;
     overflow-y: scroll;
     overflow-x: hidden;
-    
-}
-
-.container {
-    display: flex;
-    flex: 1;
 }
 
 menu{
