@@ -589,23 +589,15 @@ h4 {
 /*Projects section*/
 .projects-container {
     display: flex;
-    justify-content: center;
-    width: 1200px;
-    align-items: center;
-    margin:0 auto;
-    height: 295px;
-    padding: 20px;
-    overflow-x: scroll;
-    overflow-y: hidden;
+    justify-content: space-between; 
+    margin: 0 -5px; 
+    padding: 15px;
   }
 
-.projects-container img {
-    width: 400px;
-    height: 100%;
-    box-sizing: border-box;
-    text-align: right;
-    padding: 20px;
-}
+.box1-projects, .box2-projects {
+    width: calc(50% - 10px); 
+    margin: 0 5px;
+    }
 
 /*Recommendation*/
 .swiper {
@@ -773,7 +765,7 @@ form button {
 }
 
 /*Bigger screens*/
-@media only screen and (min-width: 601px) {
+@media only screen and (min-width: 701px) {
     .topnav {
         display: none;
     } 
@@ -800,10 +792,11 @@ form button {
 }
 
 /*Smaller screens*/
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 700px) {
 
     html {
         overflow-x: hidden;
+        cursor: pointer;
     }
 
    body {
@@ -1041,4 +1034,21 @@ form button {
     padding-bottom: 0px;
    }
 
+   .projects-container {
+    display: flex;
+   } 
+
+   .box1-projects, .box2-projects {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+   }
+
+   .projects-container img {
+    width: 150px;
+    height: 100px;
+    margin-bottom: 15px;
+   }
 }
