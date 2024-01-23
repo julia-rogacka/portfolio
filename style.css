@@ -7,13 +7,13 @@
     --light-green: #4edf86;
     --dark-green: #21cc7f;
     background-image: url(home_background-img-70.png);
+    background-image: url(home_background-img-70.png);
 }
 
 * {
     font-family: 'Poppins', sans-serif;
 }
 
-<<<<<<< HEAD
 @media only screen and (min-width: 800px) {
     .topnav {
         display: none;
@@ -35,6 +35,8 @@
 
     .top {
         z-index: 998;
+        display: flex;
+        justify-content: space-between;
     }
 
     .top img {
@@ -44,14 +46,13 @@
 
     .openbtn {
         display: block;
-        align-items: flex-end;
+        align-self: start;
    }
 
    .topnav {
         display: none;
         flex-direction: column;
         position: relative;
-        background-position-y: center;
         top: 60px;
         left: 0;
         width: 100%;
@@ -97,13 +98,9 @@
     .topnav a:hover, .topnav a:active {
         color: var(--dark-green);
     }
-=======
-@media only screen and (max-width: 800px) {
    body {
     width: 100%;
-    
    }
->>>>>>> b942f131fcb9df089ad02ffbf0972ff95764abee
 
    .sidebar {
     display: none;
@@ -113,19 +110,8 @@
     height: 100%;
     width: fit-content;
    }
-<<<<<<< HEAD
 }
 
-=======
-
-   menu {
-    height: 250px;
-    margin-bottom: 0px;
-   }
-}
-
-
->>>>>>> b942f131fcb9df089ad02ffbf0972ff95764abee
 .divider {
     height: 20px;
     width: max-content;
@@ -412,7 +398,7 @@ h1{
     background-color: var(--light-background-color);
     text-align: center;
     padding: 24px 0px;
-    padding-top: 105px;
+    padding-top: 85px;
 }
 
 #resume {
@@ -421,7 +407,7 @@ h1{
     background-color: var(--light-background-color);
     text-align: center;
     padding: 24px 0px;
-    padding-top: 105px;
+    padding-top: 85px;
 }
 
 /*Headlines of all of the sections*/
